@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario de Login</title>
+    <meta name="viewport" content="width=device-width, user-scaleble=no,
+    initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="Recursos/MisEstilos.css">
+  </head>
+  <body>
+    <script>
+      function validar(){
+        var valor1 = document.getElementById('email').value;
+        var valor2 = document.getElementById('tel').value;
+        var expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+        if ((expresion.test(valor1)) && ((valor2.length == 10) && ( !isNaN (valor2) ))) {
+          return true;
+        } else{
+          if ((!expresion.test(valor1)) && ((valor2.length != 10) && ( isNaN (valor2) ))){
+            alert("El correo electrónico y Telefono no validos. Revisa e intente de nuevo");
+          }else{
+            if(!expresion.test(valor1)){
+              alert("El correo electrónico no es valido. Revisa e intente de nuevo");
+            }else{
+              alert("El Telefono ingresado no es valido. Revisa e intente de nuevo");
+            }
+          }
+          return false;
+        } 
+      }
+      let time;
+      function enviar(a) {
+        a.disabled = true;
+        a.value = 'Enviando datos ...';
+      }
+    </script>
+    <form class="" action="" method="post" name="FormContacto" onsubmit="return validar()">
+      <h2>Contacto</h2>
+      <p>Correo Electronico</p>
+      <input type="text" name="txtEmail" id="email" placeholder="&#9993; usuario@mail.com">
+      <p>Fecha de Nacimiento</p>
+      <input type="date" name="txtFecha">
+      <p>Teléfono</p>
+      <input type="text" name="txtTelefono" id="tel" placeholder="&#9742; Telefono">
+      <input type="button" name="BtnEnviar" value="Enviar" onclick="enviar(this);validar(); this.form.submit()">
+    </form>
+  </body>
+</html>
