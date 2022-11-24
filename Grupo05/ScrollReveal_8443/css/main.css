@@ -1,0 +1,26 @@
+
+.navbar-brand {
+  font-size: 20px;
+  color: #3FD;
+  font-weight: bold;
+}
+
+#testimonial {
+  background: #3A6073;
+  padding: 50px 0 30px 0;
+  text-align:center;
+  margin-top: 40px;
+}
+
+.logo{
+    height: 50px;
+    margin-top: -10px;
+    margin-bottom: 3px;
+}
+
+footer {
+  background-color: white;
+  background: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
