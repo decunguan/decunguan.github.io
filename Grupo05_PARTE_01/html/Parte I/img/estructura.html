@@ -1,0 +1,350 @@
+<!doctype html>
+<html class="no-js" lang="es" dir="ltr"><!-- InstanceBegin template="/Templates/ixvos_ecursos.dwt" codeOutsideHTMLIsLocked="false" -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+  
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- InstanceBeginEditable name="doctitle" -->
+ <title>CURSO DE HTML 4.01 - Estructura de una página web - Internet para vos</title>
+    	<meta name="description" content="Comenzamos con las primeras etiquetas." />
+ <!-- InstanceEndEditable -->
+     <link rel="stylesheet"  href="../../css2/foundation.min.css"  media="all">
+    <link rel="stylesheet" href="../../css2/foundation-float.min.css" media="all">
+     <link rel="stylesheet" href="../../icofont/icofont.min.css" media="all">
+    <link rel="stylesheet" href="../../css2/ixvos-v5.css" id="swap" media="all">
+   
+    <link rel="preload" as="image" href="../../images/desarrollo-web.gif" /> 
+	<link rel="preload" as="image" href="../../images/home-landing-internet-para-vos.jpg" /> 
+	<link rel="preload" as="image" href="../../images/home-landing-small-internet-para-vos.jpg" />
+      <link rel="preload" href="../../css2/font/AUdimat-Regular.ttf" as="font" type="font/ttf" crossorigin />
+	<link rel="preload" href="../../css2/font/TitilliumWeb-Regular.ttf" as="font" type="font/ttf" crossorigin />
+	   
+ 	<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />  
+ 	
+  <meta name="keywords" content="mantenimiento sitio web,diseno de paginas web,elaboracion de paginas web,actualizacion de paginas web,desarrollo de paginas web,mantenimiento de sitios web,diseño web freelance,desarrollo pagina web,desarrollador web,desarrollo de pagina web,diseño sitios web,desarrollo de paginas web,diseño web economico,desarrollo web economico,diseño web html5,html5/css3" />
+	<meta name="author" content="Internet para vos - Elena Navntoft" /> 
+  <!-- Open Graph data -->
+ <meta property="og:title" content="Internet para vos - Desarrollo web" />
+ <meta property="og:type" content="Article" />
+ 
+ <meta property="og:url" content=" https://ecursos.internetparavos.com.ar/html/" />
+ <meta property="og:image" content=" https://www.internetparavos.com.ar/images/redes/curso_html.jpg" />
+ <meta property="og:description" content="Principios básicos de HTML 4.01, base del actual HTML5" />
+ <!-- InstanceBeginEditable name="head" -->
+ <!-- InstanceEndEditable -->
+ 
+  </head>
+  <body class="is-preload" oncopy="return false" oncut="return false" onpaste="return false" oncontextmenu="return false">
+ <main> <!-- comienzo sitio -->
+ <header id="top"> <!-- header menú -->
+
+ <div data-sticky-container role="navigation" class="barra-ppal"> 
+  <div data-sticky data-options="marginTop:0; anchor:page; stickyOn:small" class="navegacion"> 
+   <div class="title-bar" data-responsive-toggle="menu-ixvos" data-hide-for="large" >
+      <button class="menu-icon" id="menubutton" type="button" data-toggle="menu-ixvos" aria-controls="menu-sitio" aria-haspopup="true" aria-expanded="true" aria-label="menu clic para expandir"></button>
+       <div class="title-bar-title">&nbsp;Menú</div> 
+    </div> 
+
+    <nav class="top-bar" id="menu-ixvos" aria-label="Menú Internet para vos">
+     <ul id="menu-sitio" class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown" aria-labelledby="menubutton" role="menubar">
+        <li style="margin-right: 0.5em;" role="none"><h1><a href="../../index.htm" class="logo" tabindex="0" role="menuitem"><img src="../../img/logo_internet_para_vos.png"  role="img" alt="Internet para vos - Desarrollo web y web marketing"><span>Internet para vos</span></a></h1></li>
+        <li class="tit-submenu is-dropdown-submenu-parent" >
+         	 <a href="#" aria-expanded="true" tabindex="0" aria-haspopup="true" role="button" id="drop1">Servicios</a>
+          		<ul class="menu vertical nested" aria-labelledby="drop1">
+            		<li role="none"><a href="../../servicios/index.htm" tabindex="0" role="menuitem" >Presentación</a></li>
+            		<li role="none"><a href="../../servicios/planes-sitios-web.htm" tabindex="0" role="menuitem" >Planes sitios web</a></li>
+            		<li role="none"><a href="../../servicios/web-marketing-digital.htm" tabindex="0" role="menuitem">Web marketing</a></li>
+            		<li role="none"><a href="https://www.internetparavos.com.ar/serviciosweb/" tabindex="0" role="menuitem" >Tienda servicios web</a></li>
+             		
+          </ul>
+        </li>
+        <li role="none"><a href="../../servicios/portfolio.htm" tabindex="0" role="menuitem">Portfolio</a></li>
+        <li class="tit-submenu is-dropdown-submenu-parent"> 
+        	<a href="#" aria-controls="drop2" aria-expanded="true" tabindex="0" role="button" aria-haspopup="true">Recursos</a>
+        		<ul class="menu vertical nested" id="drop2" aria-labelledby="drop2"> 
+            		<li><a href="../../gratis/index.htm" tabindex="0" role="menuitem" >Ver todo</a></li>
+					<li><a href="https://www.internetparavos.com.ar/ecursos/" tabindex="0" role="menuitem">E-cursos</a></li>
+            		<li><a href="https://fanpages.internetparavos.com.ar" tabindex="0" role="menuitem" >Apps para Fanpages</a></li>
+            		<li><a href="../../gratis/index.htm" tabindex="0" role="menuitem">Artículos</a></li>
+
+          </ul>
+        </li>
+        <li role="none"><a href="https://internetparavos.tumblr.com/" tabindex="0" role="menuitem">Blog</a></li>
+  
+      <li role="none"><a href="../../consultas.htm" tabindex="0" role="menuitem">Contacto</a></li>
+   
+      	<div class="top-bar-right menu align-right simple accesibilidad" role="menubar">
+      	 <li role="none"><div id="accessibilidad2">
+           <a tabindex="0" role="menuitem" onclick="zoomIn()" title="Aumentar tamaño de fuente"><img src="../../images/b-aumentar-fuente.jpg" alt="botón aumentar tamaño de fuente" width="48" height="48"></a>
+            <a tabindex="0" role="menuitem" onclick="zoomOut()" title="Disminuir tamaño de fuente"><img src="../../images/b-disminuir-fuente.jpg" alt="disminuir tamaño de fuente" width="48" height="48"></a>
+            <a  tabindex="0" role="menuitem" onClick="swapStylesheet2('https://www.internetparavos.com.ar/css2/contr-v5.css')" title="Alto contraste texto/fondo"><img src="../../images/b-contraste.jpg" alt="botón alto contraste texto fondo" width="48" height="48"></a>
+            <script>
+			  function swapStylesheet2(sheet) {
+            document.getElementById('swap').setAttribute('href', '/css2/contr-v5.css')
+			  }</script>
+           <a  tabindex="0" role="menuitem" onClick="swapStylesheet3('https://www.internetparavos.com.ar/css2/dyslexic-v5.css')" title="Cambiar fuente a Dyslexia"><img src="../../images/b-fuente-dislexia.jpg" alt="botón cambiar fuente a Dyslexia" width="48" height="48"></a>
+            <script>
+			  function swapStylesheet3(sheet) {
+            document.getElementById('swap').setAttribute('href', '/css2/dyslexic-v5.css')
+			  }</script> 
+            <a tabindex="0" role="menuitem" onclick="window.location.reload(true)" title="Restablecer página"><img src="../../images/b-reload.jpg" alt="botón restablecer página" width="48" height="48"></a></div></li>
+		<li class="has-form"><div style="margin-top:0.2em;" class="buscador">
+			<form class="form-inline md-form form-sm active-cyan-2 mt-2" action="https://www.internetparavos.com.ar/resultados.htm">
+			<label for="q" class="show-for-sr">Búsqueda</label> 
+       		<input type="hidden" name="cx" value="016563984809364427000:xn54p7buwz8" />
+    		<input type="hidden" name="cof" value="FORID:9" />
+    	 	<input class="termino" type="search" id="q" name="q" aria-label="Search">
+    	 	<button class="btn-buscar" type="button" name="sa" >Buscar</button>
+     		</form>
+     		 
+			</div> 
+			</li>
+		</div>
+		</ul> 
+    </nav>
+   
+ </div> 
+</div>
+</header>
+
+
+<section class="grid-container migas fluid" >
+  <div class="callout">
+     <div class="row columns">
+      <nav aria-label="Usted está aquí:" role="navigation">
+        <ul class="breadcrumbs">
+         <li><a href="../../index.htm">Inicio</a></li>
+          <li><a href="../../gratis/index.htm">Recursos</a></li>
+           <li><a href="../index.htm">E-cursos</a></li>
+           <li><a href="index.htm">HTML</a></li>
+            <li> <span class="show-for-sr">Actual: </span><!-- InstanceBeginEditable name="breadc" -->3. Estructura de una página web<!-- InstanceEndEditable --></li>
+        </ul>
+      </nav>
+    </div>
+	 </div>
+</section>
+<section class="articulo ecursos" id="articulo">
+   <header>
+     <div class="callout large">
+       <div class="row column text-center">
+          <h2>Curso de HTML</h2>
+       </div>
+     </div>
+   </header>
+ 
+   <article class="grid-container fluid">
+  <div class="callout">
+     <div class="grid-x grid-margin-x grid-padding-x">
+        
+		 <div class="large-9 cell">
+	
+	   <!-- InstanceBeginEditable name="ecursos-cont" -->
+	   <h3>3. Estructura de una página web</h3>
+		  <h4>3.1 Componentes básicos de un archivo HTML</h4>
+ <p>Dijimos en el <strong><a href="1_que_es_html.htm" title="¿Qué es HTML?">Módulo 1</a></strong> que el lenguaje HTML es un lenguaje  de marcas. Estas marcas, llamadas etiquetas, por lo general tienen una apertura y un cierre.  Aunque existen algunas etiquetas sin cierre.</p>
+    <p>Todo archivo HTML, o sea toda página web realizada en HTML,  posee una estructura básica definida por los siguientes componentes:</p>
+    <p><img src="img/modulo3_estructura_web.jpg" class="image fit" alt="Estructura web"></p>
+    <p><strong>Tipo de documento:</strong> es el estándar del HTML al que responde  nuestra página. En este caso trabajaremos con HTML 4.01. El código es el  siguiente:</p>
+ <pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01  Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code></pre>
+    <p><strong>&lt;HTML&gt;:</strong> Es la etiqueta que define el inicio del  documento HTML, le indica al navegador que todo lo que viene a continuación  debe tratarlo como una serie de códigos HTML. Todo lo que esté entre las  etiquetas &lt;HTML&gt; y &lt;/HTML&gt; será interpretado como un documento de  hipertexto. Tiene apertura y cierre.    </p>
+    <h4>3.2 Etiquetas HEAD y TITLE</h4>
+    <p><strong>&lt;HEAD&gt;:</strong> Define la cabecera del documento HTML; ésta  suele contener información sobre el documento que no se muestra directamente en  el navegador. Por ejemplo: las palabras clave del documento y su descripción,  rutinas de código javascript (cuando se utiliza), y el título del documento,  que se visualiza en la barra de títulos del navegador (ver <strong><a href="2_navegadores.htm" title="Navegadores">Módulo 2</a></strong>). Esta etiqueta tiene  apertura y cierre.</p>
+    <p><strong>&lt;TITLE&gt;: </strong>Como ya dijimos, se encuentra dentro de la  cabecera del documento, entre las etiquetas &lt;head&gt; y &lt;/head&gt;.  Define el título de la página. Es una etiqueta anidada (ver explicación al final de este módulo). Tiene apertura y cierre. </p>
+    <p><strong>&lt;META&gt;:</strong> Etiquetas meta. Sirven para suministrar una  información detallada del contenido de una página a los buscadores como Bing y  Google, con lo que se obtiene un control mayor de cómo será catalogada la  página. Las veremos en el <a href="14_etiquetas_meta.htm" title="Etiquetas meta"><strong>Módulo 14</strong></a><strong> </strong>de este curso. El cierre de estas etiquetas es una barra inclinada.</p>
+    <h4>3.3 Etiqueta BODY</h4>
+    <p><strong>&lt;BODY&gt;:</strong> Define el contenido principal o cuerpo del  documento. Es la parte del documento HTML que se muestra en el navegador, con  el contenido de nuestra página. En la etiqueta <strong>body</strong> pueden definirse  propiedades (atributos) comunes a toda la página, como color de fondo o imagen  de fondo, márgenes y otros. Esta etiqueta tiene apertura y cierre.</p>
+    <h5>Etiquetas anidadas</h5>
+    <p>La regla general para anidar etiquetas, es que <em>la primera en abrirse es la última en  cerrarse</em>. Por ejemplo, dentro de  la etiqueta <strong>head</strong> encontramos la etiqueta <strong>title</strong>. Y, a su vez, estas están dentro de la etiqueta <strong>html</strong>. Este tema se volverá a ver en  detalle más adelante con el desarrollo de otras etiquetas.</p>
+    <h5>Preparamos el archivo de trabajo</h5>
+    <p>Para acelerar el proceso de escritura de nuestros  archivos HTML, podemos hacer una pequeña plantilla. Creamos un archivo de texto con el <strong>Bloc de notas</strong>, con las etiquetas <strong>html</strong>, <strong>head</strong>, <strong>title</strong> y <strong>body</strong> y lo guardamos. Cada vez que necesitemos crear un nuevo archivo HTML, podremos  utilizar este documento como punto de partida. </p>
+    <h5>Utilización del bloc de notas para escribir archivos HTML</h5>
+    <p>1-  Abrimos el <strong>Bloc de  notas</strong>.<br>
+      2- Escribimos las  etiquetas y su contenido principal.<br>
+      3- Hacemos clic en el menú <strong>Archivo/Guardar como...</strong><br>
+      4- En <strong>Tipo </strong>seleccionamos <strong>Todos los archivos</strong>.<br>
+      5- Guardamos el  archivo con extensión <strong>.htm o .html</strong>.</p>
+    <p>Es indistinto el tipo y tamaño de letra empleados para hacer  el archivo HTML ya que el navegador no interpreta estos datos. También es indistinto si utilizamos mayúscula o minúscula para las etiquetas. Por convención las escribimos en minúsculas.</p>
+    <p><strong>Visualizar los archivos HTML:</strong> desde el explorador de Windows hacemos doble clic en el archivo y se abrirá con el navegador que tenemos por defecto.</p>
+ 
+   
+           <div class="callout material">
+             <h4>Material adicional</h4>
+             <p>Programas similares al bloc de notas diseñados especialmente  para programación:</p>
+   <ul>
+     <li><a href="http://www.htmlkit.com/download/#download-html-kit-292" title="HTML-Kit" target="_blank" rel="nofollow">HTML-Kit</a></li>
+     <li><a href="https://notepad-plus-plus.org/" title="Notepad++" target="_blank" rel="nofollow">Notepad++ </a></li>
+     <li><a href="https://www.sublimetext.com/" title="Sublime Text" target="_blank" rel="nofollow">Sublime Text</a></li>
+     
+   </ul>
+           </div>
+           <p>Actualización: enero, 2021. Elena Navntoft.</p>
+		 <!-- InstanceEndEditable -->
+		 </div>
+		 <div class="large-3 cell menu-html" >
+		 
+		 	<h3>Menú curso HTML</h3>
+		 	 <ol type="1">
+      <li><a href="1_que_es_html.htm" title="Curso HTML 1 ¿Qué es HTML?">¿Qué es HTML?</a></li>
+      <li><a href="2_navegadores.htm" title="Curso HTML: 2 Navegadores">Navegadores</a></li>
+      <li><a href="3_estructura_web.htm" title="Curso HTML: 3 Estructura de una página web">Estructura de una página web</a></li>
+      <li><a href="4_etiqueta_body.htm" title="Curso HTML: 4 Etiqueta BODY">Etiqueta BODY</a></li>
+      <li><a href="5_textos.htm" title="Curso HTML: Textos">Formato de textos</a></li>
+      <li><a href="6_listas.htm">Listas</a></li>
+      <li><a href="7_imagenes.htm" title="Curso HTML 7 Imágenes">Imágenes</a></li>
+      <li><a href="8_imagenes_tipos.htm" title="Curso HTML - 8 Tipos de imágenes">Tipos de imágenes</a></li>
+      <li><a href="9_enlaces.htm" title="Curso HTML - 9 Enlaces">Enlaces</a></li>
+      <li><a href="10_tablas.htm" title="Curso HTML - 10 Tablas">Tablas</a></li>
+      <li><a href="11_marcos.htm" title="Curso HTML - 11 Marcos">Marcos</a></li>
+      <li><a href="12_multimedia.htm" title="Curso HTML - 12 Audio y video">Audio y video</a></li>
+      <li><a href="13_formularios.htm" title="Curso HTML - 13 Formularios">Formularios</a></li>
+      <li><a href="14_etiquetas_meta.htm" title="Curso HTML - 14 Etiquetas meta">Etiquetas meta</a></li>
+      <li><a href="15_publicacion_sitio.htm" title="Curso HTML 15 - Publicación del sitio">Publicación del sitio</a></li>
+      </ol>
+		 	<div class="callout enlaces">
+		 		<h4>Enlaces complementarios</h4>
+		 		<ul>
+					<li><a href="glosario.htm" title="Curso HTML - Glosario">Glosario</a></li>
+        <li><a href="caracteres_especiales.htm" title="Curso HTML Caracteres especiales">Caracteres especiales</a></li>
+					 <li><a href="colores.htm" title="Curso HTML - Colores">Colores</a></li>
+        <li><a href="etiquetas_html.htm" title="Curso HTML - Etiquetas HTML del curso">Etiquetas HTML del curso</a>
+      </li>
+      </ul>
+			 </div>
+		 	
+		 	
+		 
+		
+		</div>
+   </div>
+  </div>
+	 </article>
+ </section>
+
+	 
+<footer class="grid-container fluid">
+	<div class="callout">
+             <div class="grid-x grid-margin-x ">
+              <div class="large-3 medium-6 cell pres"> <!-- col 1 enlaces -->
+				  <h3>Enlaces</h3>
+						<ul class="enlaces">
+							<li><i class="icofont-star"></i><span><a href="https://www.internetparavos.com.ar">Inicio</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="https://internetparavos.com.ar/servicios/index.htm">Servicios</a></span></li>
+							<li><i class="icofont-cart"></i><span><a href="https://internetparavos.com.ar/serviciosweb">Servicios, tienda</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="../../servicios/portfolio.htm">Portfolio</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="../../gratis/index.htm">Recursos</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="https://internetparavos.tumblr.com">Tumblr de Internet para vos</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="../../consultas.htm">Contacto</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="../../accesibilidad.htm">Accesibilidad</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="../../politica-de-privacidad-devoluciones.htm">Privacidad y devoluciones</a></span></li>
+							<li><i class="icofont-star"></i><span><a href="../../mapa_del_sitio.htm">Mapa del sitio</a></span></li>
+					</ul>				
+              </div>
+              <div class="large-3 medium-6 cell pres"> <!-- col 2 redes -->
+				<h3>Nuestras redes</h3>
+				  <p><span class="icono"><a href="https://www.facebook.com/webs.sitios.paginas" aria-label="Facebok"><i class="icofont-facebook"></i></a></span>
+             		<span class="icono"><a href="https://www.twitter.com/ixvos" aria-label="Twitter"><i class="icofont-twitter"></i></a></span> 
+             		<span class="icono"><a href="https://www.instagram.com/webs.sitios.paginas" aria-label="Instagram"><i class="icofont-instagram"></i></a></span> 
+             		<span class="icono"><a href="https://www.pinterest.com/internetparavos"  aria-label="Pinterest"><i class="icofont-pinterest" ></i></a></span>
+             		<span class="icono"><a href="https://www.youtube.com/internetparavos" aria-label="YouTube"><i class="icofont-youtube"></i></a></span>
+             		<span class="icono"><a href="https://ar.linkedin.com/company/internet-para-vos" aria-label="LinkedIn"><i class="icofont-linkedin"></i></a></span></p>
+			   </div>
+              <div class="large-3 medium-6 cell pres"> <!-- col 3 contacto -->
+				  <h3>Contacto</h3>
+					<ul class="contacto icofont-ul">
+						<li><i class="icofont-linkedin"></i><span><a href="https://ar.linkedin.com/in/elenaines" title="Perfil personal de Elena Navntoft en Linkedin">Elena Navntoft</a></span></li>
+						<li><i class="icofont-whatsapp"></i><span><a href="https://wa.me/5401164748484" title="Envianos un mensaje por Whatsapp">11-6474-8484</a></span></li>
+						<li><i class="icofont-whatsapp"></i><span><a href="https://wa.me/5401168667646" title="Envianos un mensaje por Whatsapp">11-6866-7646</a></span></li>
+						<li><i class="icofont-phone"></i><span><a href="tel:+5401143082144" title="Llamanos a nuestro teléfono fijo">11-4308-2144</a></span></li>
+						<li><i class="icofont-envelope"></i><span><a href="mailto:info@internetparavos.com.ar">Envianos un e-mail aquí</a></span>.</li>
+						<li><i class="icofont-envelope"></i><span><a href="mailto:internetparavos@gmail.com">O también aquí</a>.</span></li>
+						<li><i class="icofont-google-map"></i><span>Balvanera, CABA. <a href="https://g.page/internetparavos?share">G-Maps</a></span>.</li>
+						<li><i class="icofont-wall-clock" style="vertical-align: text-top"></i><span>L-D, 11 a 22 h.</span></li>
+					</ul>			
+              </div>
+              <div class="large-3 medium-6 cell pres"> <!-- row data fiscal -->
+				 <h3>Data Fiscal</h3>
+				  <div class="grid-x grid-margin-x grid-margin-y">
+	              <div class="large-3 medium-4 small-4 cell">					
+					<a href="http://qr.afip.gob.ar/?qr=oyj_0I_gEbRcDYTULrSKrw,," target="_F960AFIPInfo" class="dataweb" rel="nofollow noopener noreferrer"><img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" class="datafiscal" alt="data fiscal" width="120" height="210" style="width: 70px; height: auto"></a>
+				  </div>
+            	  <div class="large-9 medium-8 small-8 cell">	
+            		<p>Emitimos Factura C.</p>
+				  </div>
+            	  </div>
+            		 <hr>
+            	 	<h3>Medios de pago</h3>
+             		<p>Depósito, transferencia, efectivo.</p>
+             	 </div>
+            </div>
+		</div>
+</footer>
+<div class="grid-container fluid copyright" >
+		<div class="large-12 text-center"><span>&copy; 2022 - <a href="https://www.internetparavos.com.ar">Internet para vos</a>. Desarrollo web y web marketing.</span><span class="arriba"><a href="#top" data-smooth-scroll title="Ir arriba" aria-label="Arriba" class="button">Arriba</a></span></div>
+</div>
+      </main>     <!-- fin main -->  
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script> 
+<script src="../../js2/vendor/what-input.js"></script> 
+
+<script> /* menú */
+		$(document).foundation();
+		$('#menu-ixvos').on('toggled', function (event, accordion) {
+  console.log(accordion);
+			$('#drop1').foundation('getPositionClass');
+			 $('#drop1').foundation('open');
+			$('#drop2').foundation('open');
+});
+</script> 
+<script> /* funciones para agrandar/achicar letra */
+        var fontSize = 1;
+        // aumentar la fuente
+        function zoomIn() {
+            fontSize += 0.1;
+            document.body.style.fontSize = fontSize + "em";
+        }
+        // disminuir la fuente
+        function zoomOut() {
+            fontSize -= 0.1;
+            document.body.style.fontSize = fontSize + "em";
+        }
+</script>
+	
+<script>	
+	$(document).keydown(function (event) {
+    if (event.keyCode == 123) { // Prevent F12
+        return false;
+    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+        return false;
+    }
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    //Check if the current URL contains '#'
+    if(document.URL.indexOf("#")==-1)
+    {
+    // Set the URL to whatever it was plus "#".
+    url = document.URL+"#";
+    location = "#";
+
+    //Reload the page
+    location.reload(true);
+
+    }
+    });
+	  </script>
+  <script>
+    document.onkeydown = function (e) {
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+    }
+</script>
+    </body>
+<!-- InstanceEnd --></html>
