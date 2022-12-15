@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<!--
+	Salient by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS HTML DOM</title>
+  <link href="../img/favicon.png" rel="icon">
+  <!-- Custom Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,300,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Crimson+Text:400,600" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap CSS Style -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <!-- Template CSS Style -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Animate CSS  -->
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <!-- FontAwesome 4.3.0 Icons  -->
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+  <!-- BXslider CSS  -->
+  <link rel="stylesheet" href="./css/bxslider/jquery.bxslider.css">
+
+  <!-- Magnific-Popup CSS Style -->
+  <link rel="stylesheet" href="./css/magnific-popup/magnific-popup.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+	
+</head>
+
+<style>
+  #myDiv1, #myDiv2 {
+  background-color: #3739E1;
+  padding: 50px;
+}
+
+#myP1, #myP2 {
+  background-color: white; 
+  font-size: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+#myDIV {
+  background-color: #3739E1;
+  border: 1px solid;
+  padding: 50px;
+  color: white;
+  font-size: 20px;
+}
+</style>
+<body>
+
+  <!-- Preload the Whole Page -->
+  <div id="preloader">      
+    <div id="loading-animation">&nbsp;</div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+           <a class="navbar-brand" href="../../index.html"><img class="logo" src="../img/logo.png" alt=""></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navigation-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a class="section-scroll" href="#wrapper">Inicio</a></li>
+            <li><a href="#addevent">addEventListener</a></li>
+            <li><a href="#Agregar">Agregar un controlador</a></li>
+            <li><a href="#Agregue">Muchos controladores</a></li>
+            <li><a href="#Burbujeo">Burbujeo de Eventos</a></li>
+            <li><a href="#remove">removeEventListener</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+  </header>
+  <!-- End Navbar -->
+
+  <div id="wrapper">
+
+  <!-- Hero
+  ================================================== -->
+    <section>
+      <div id="hero-section" class="landing-hero" data-stellar-background-ratio="0">
+        <div class="hero-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12" style="text-align: center;">
+                <h1>El HTML DOM - EVENT LISTENER</h1>
+                <div class="div-line"></div>
+                </div> <!-- end col-md-6 -->
+            </div> <!-- end row -->
+          </div> <!-- End container -->
+        </div> <!-- End hero-content -->
+      </div> <!-- End hero-section -->
+    </section>
+    <!-- End hero section -->
+
+    <!-- Offer
+    ================================================== -->
+    <section>
+      <div id="addevent" class="pad-sec">
+        <div class="container">
+          <div class="title-section big-title-sec animated out" data-animation="fadeInUp" data-delay="0">
+            <div class="row">
+              <div class="col-sm-12" style="text-align: left;">
+                <h1>METODO DE addEventListener()</h1>
+                <p>El addEventListener() adjunta un controlador de eventos a un elemento sin sobrescribir los controladores de eventos existentes.</p>
+                <br>
+                <h2>Ejemplo</h2>
+                <div class="col-lg-5">
+                    <br>
+                    <p>
+                        &#60;h2>Ejemplo addEventListener/h2><br>
+                        &#60;p>Este es un ejemplo de addEventListener()./p><br>
+                        &#60;button id="myBtn">Mostrar/button><br>
+                        &#60; p id="demo">/p><br>
+                        &#60;script><br>
+                        document.getElementById("myBtn").<br>
+                        addEventListener("click", displayDate);<br>
+                        function displayDate() {<br>
+                        document.getElementById("demo").innerHTML = Date();<br>
+                        }<br>
+                        &#60;/script><br>
+                    </p>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-2 ">
+                        <h2>Ejemplo addEventListener</h2>
+                        <p>Este es un ejemplo de addEventListener()</p>
+                        <button id="myBtn">Mostrar</button>
+                        <p id="demo1"></p>
+                  </div> 
+                  <br>
+              </div> <!-- End row -->
+          </div> <!-- end title-section -->
+          </div> <!-- End offer-boxes -->
+        </div> <!-- End container -->
+      </div> <!-- End landing-offer-section -->
+    </section>
+    <!-- End offer section -->
+    <section>
+      <div class="sep-section"></div>
+    </section>
+
+   <!-- Offer
+    ================================================== -->
+    <section>
+      <div id="Agregar" class="clients-bg" data-stellar-background-ratio="0">
+        <div class="container">
+          <div class="title-section big-title-sec animated out" data-animation="fadeInUp" data-delay="0">
+            <div class="row">
+              <div class="col-sm-12" style="text-align: left;">
+                <h1 style="color: #fff">Agregar un controlador de eventos a un elemento</h1>
+                <div class="col-lg-5">
+                  <br>
+                  <p style="color: white;">
+                      &#60;h2>Agregar un controlador ejemplo /h2><br>
+                      &#60;p>Este ejemplo muestra el uso de addEvent./p><br>
+                      &#60;button id="myBtn">Mostrar/button><br>
+                      &#60;script><br>
+                      &#60;document.getElementById("myBtn").<br>
+                      addEventListener("click", function() {<br>
+                      &#60;   alert("Este es un controlador");<br>
+                      &#60;});<br>
+                      &#60;/script><br>
+      
+                  </p>
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 " style="color: white;">
+                      <h2 style="color: white;">Agregar un controlador ejemplo </h2>
+                      <p>Este ejemplo muestra el uso de addEventListener().</p>
+                      <button id="myBtn1">Mostrar</button>
+                </div>
+            </div> <!-- End row -->
+          </div> <!-- end title-section -->
+          </div> <!-- End offer-boxes -->
+        </div> <!-- End container -->
+      </div> <!-- End landing-offer-section -->
+    </section>
+    <!-- End offer section -->
+    <section>
+      <div class="sep-section"></div>
+    </section>
+
+   <!-- Offer
+    ================================================== -->
+    <section>
+      <div id="Agregue" class="pad-sec">
+        <div class="container">
+          <div class="title-section big-title-sec animated out" data-animation="fadeInUp" data-delay="0">
+            <div class="row">
+              <div class="col-sm-12" style="text-align: left;">
+                <h1>Agregue muchos controladores de eventos al mismo elemento</h1>
+                <p>El addEventListener() le permite agregar muchos eventos al mismo elemento, sin sobrescribir los eventos existentes:</p>
+                <br>
+                
+                <h2>Ejemplo</h2>
+                <div class="col-lg-5">
+                    <br>
+                    <p>
+                      &#60;p>Agregar varios controladores a un elemento./p><br>
+                      &#60;button id="myBtn">Mostrar/button><br>
+                      &#60;script><br>
+                      var x = document.getElementById("myBtn");<br>
+                      x.addEventListener("click", myFunction);<br>
+                      x.addEventListener("click", someOtherFunction);<br>
+                      function myFunction() {<br>
+                        alert ("Este es mi primer controlador de evento");<br>
+                      }<br>
+                      function someOtherFunction() {<br>
+                        alert ("Este es el segundo controlador de evento");<br>
+                      }<br>
+                      &#60;/script><br>
+                        
+                    </p>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-2 ">
+                    <h2>Agregar varios controladores a un elemento</h2>
+                    <button id="myBtn2">Mostrar</button>
+                  </div> 
+                  <br>
+              
+                </div> <!-- End row -->
+          </div> <!-- end title-section -->
+          </div> <!-- End offer-boxes -->
+        </div> <!-- End container -->
+      </div> <!-- End landing-offer-section -->
+    </section>
+    <!-- End offer section -->
+    <section>
+      <div class="sep-section"></div>
+    </section>
+
+    <!-- End offer section -->
+    <section>
+      <div id="Burbujeo" class="clients-bg" data-stellar-background-ratio="0">
+        <div class="container">
+          <div class="title-section big-title-sec animated out" data-animation="fadeInUp" data-delay="0">
+            <div class="row">
+              <div class="col-sm-12" style="text-align: left;">
+                <h1 style="color: #fff">Burbujeo de eventos o captura de eventos</h1>
+                <p style="color: #fff">Hay dos formas de propagación de eventos en HTML DOM, burbujeo y captura. </p>
+                <p style="color: #fff">La propagación de eventos es una forma de definir el orden de los elementos cuando ocurre un evento. Si tiene un elemento </p>
+                <p style="color: #fff"> dentro de un elemento &#60;div> y el usuario hace clic en el elemento &#60;p>, ¿qué evento de "clic" de elemento debe manejarse primero? </p>
+                <ul style="color: #fff">
+                  <li>Al burbujear , el evento del elemento más interno se maneja primero y luego el externo: el evento de clic del elemento p> se maneja primero, luego el evento de clic del elemento &#60;div>.</li>
+                  <li>Al capturar el evento del elemento más externo se maneja primero y luego el interno: el evento de clic del elemento &#60;div> se manejará primero, luego el evento de clic del elemento p>.</li>
+                </ul>
+                <p style="color: #fff">Con el método addEventListener() puedes especificar el tipo de propagación usando el parámetro "useCapture":</p>
+                <div class="col-lg-5">
+                  <br>
+                  <p style="color: white;">
+                    &#60;head><br>
+                    &#60;style><br>
+                    #myDiv1, #myDiv2 {<br>
+                      background-color: #3739E1;<br>
+                      padding: 50px;<br>
+                    }<br>
+                    #myP1, #myP2 {<br>
+                      background-color: white; <br>
+                      font-size: 20px;<br>
+                      border: 1px solid;<br>
+                      padding: 20px;<br>
+                    }<br>
+                    &#60;/style><br>
+                    &#60;meta content="text/html; charset=utf-8" http-equiv="Content-Type"><br>
+                    &#60;/head><br>
+                    &#60;body><br>
+                    &#60;h2>Burbujeo de eventos en JS/h2><br>
+                    &#60;div id="myDiv1"><br>
+                    &#60;h2>Burbujeante:/h2><br>
+                    &#60;p id="myP1">Muestrame!/p><br>
+                    &#60;/div><br>
+                    &#60;div id="myDiv2"><br>
+                    &#60;h2>Capturante:/h2><br>
+                    &#60;p id="myP2">Muestrame!/p><br>
+                    &#60;/div><br>
+                    &#60;script><br>
+                    document.getElementById("myP1"). <br>addEventListener("click", function() {<br>
+                      alert("Diste clic en el elemento Blanco!");<br>
+                    }, false);<br>
+                    document.getElementById("myDiv1").<br>addEventListener("click", function() {<br>
+                      alert("Diste clic en el elemento Azul!");<br>
+                    }, false);<br>
+                    document.getElementById("myP2").<br>addEventListener("click", function() {<br>
+                      alert("Diste clic en el elemento Blanco!");<br>
+                    }, true);<br>
+                    document.getElementById("myDiv2").<br>addEventListener("click", function() {<br>
+                      alert("Diste clic en el elemento Azul!");<br>
+                    }, true);<br>
+                    &#60;/script><br>
+                  </p>
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 ">
+                  <h2 style="color: #fff">Burbujeo de eventos en JS</h2>
+                  <div id="myDiv1">
+                    <h2 style="color: #fff">Burbujeante:</h2>
+                    <p id="myP1">Muestrame!</p>
+                  </div><br>
+  
+                  <div id="myDiv2">
+                    <h2>Capturando:</h2>
+                    <p id="myP2">Muestrame!</p>
+                </div>
+            </div> <!-- End row -->
+          </div> <!-- end title-section -->
+          </div> <!-- End offer-boxes -->
+        </div> <!-- End container -->
+      </div> <!-- End landing-offer-section -->
+    </section>
+    <!-- End offer section -->
+    <section>
+      <div class="sep-section"></div>
+    </section>
+
+
+
+    <section>
+      <div id="remove" class="pad-sec">
+        <div class="container">
+          <div class="title-section big-title-sec animated out" data-animation="fadeInUp" data-delay="0">
+            <div class="row">
+              <div class="col-sm-12" style="text-align: left;">
+                <h1>El método removeEventListener()</h1>
+                <p>El removeEventListener()método elimina los controladores de eventos que se han adjuntado con el método addEventListener().</p>
+                <br>
+                
+                <h2>Ejemplo</h2>
+                <div class="col-lg-5">
+                    <br>
+                    <p>
+                      &#60;body><br>
+                      &#60;h2>Evento removeEventListener en JavaScript/h2><br>
+                      &#60;div id="myDIV"><br>
+                      &#60;p>Este elemento div tiene un controlador de eventos onmousemove que muestra un número aleatorio cada vez que mueve el mouse dentro de este campo azul../p><br>
+                      &#60;p>Haga clic en el botón para eliminar el controlador de eventos del div.p><br>
+                      &#60;button onclick="removeHandler()" id="myBtn">Remover/button><br>
+                      &#60;/div><br>
+                      &#60;p id="demo"/p><br>
+                      &#60;script><br>
+                      document.getElementById("myDIV").<br>
+                      addEventListener("mousemove", myFunction);<br>
+                      function myFunction() {<br>
+                        document.getElementById("demo").<br>
+                        innerHTML = Math.random();<br>
+                      }<br>
+                      function removeHandler() {<br>
+                        document.getElementById("myDIV").<br>
+                        removeEventListener("mousemove", myFunction);<br>
+                      }<br>
+                      &#60;/script><br>
+                    </p>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-2 ">
+                    <h2>Evento removeEventListener en JavaScript</h2>
+                    <div id="myDIV">
+                      <p>Este elemento div tiene un controlador de eventos onmousemove que muestra un número aleatorio cada vez que mueve el mouse dentro de este campo azul.</p>
+                      <p>Haga clic en el botón para eliminar el controlador de eventos del div.</p>
+                      <button onclick="removeHandler()" id="myBtn5" style="color: black;">Remover</button>
+                    </div>
+                    <p id="demo5"></p>  
+                  </div> 
+                  <br>
+              
+                </div> <!-- End row -->
+          </div> <!-- end title-section -->
+          </div> <!-- End offer-boxes -->
+        </div> <!-- End container -->
+      </div> <!-- End landing-offer-section -->
+    </section>
+    <!-- End offer section -->
+    <section>
+      <div class="sep-section"></div>
+    </section>
+
+    
+    
+
+
+    <!-- Footer
+    ================================================== -->
+<footer class="bg-dark text-center text-white">
+      <div id="footer-section " class="text-center ">
+        <div class="container">
+          <div class="row">
+              <p class="copyright">
+                Grupo 5 Todos los derechos Reservados
+              </p>
+            </div> <!-- End col-sm-8 -->
+          </div> <!-- End row -->
+        </div> <!-- End container -->
+      </div> <!-- End footer-section  -->
+    </footer>
+    <!-- End footer -->
+
+  </div> <!-- End wrapper -->
+
+
+  <!-- Back-to-top
+  ================================================== -->
+  <div class="back-to-top">
+    <i class="fa fa-angle-up fa-3x"></i>
+  </div> <!-- end back-to-top -->
+
+  <!-- JS libraries and scripts -->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-hover-dropdown.min.js"></script>
+  <script src="../js/jquery.appear.min.js"></script>
+  <script src="../js/jquery.bxslider.min.js"></script>
+  <script src="../js/jquery.owl.carousel.min.js"></script>
+  <script src="../js/jquery.countTo.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.imgloaded.min.js"></script>
+  <script src="../js/jquery.isotope.js"></script>
+  <script src="../js/jquery.placeholder.js"></script>
+  <script src="../js/jquery.smoothscroll.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/jquery.waypoints.js"></script>
+  <script src="../js/jquery.fitvids.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/jquery.ajaxchimp.min.js"></script>
+  <script src="../js/jquery.countdown.js"></script>
+  <script src="ets/js/jquery.navbar-scroll.js"></script>
+  <script src="ht../tp://maps.google.com/maps/api/js?sensor=false"></script>
+  <script src="../js/jquery.gmaps.js"></script>
+  <script src="../js/main.js"></script>
+
+  <script>
+    document.getElementById("myBtn").addEventListener("click", displayDate);
+    function displayDate() {
+    document.getElementById("demo1").innerHTML = Date();
+    }
+    document.getElementById("myBtn1").addEventListener("click", function() {
+      alert("Este es un ejemplo de agregar un controlador");
+    });
+    var x = document.getElementById("myBtn2");
+    x.addEventListener("click", myFunctionP2);
+    x.addEventListener("click", someOtherFunction);
+
+    function myFunctionP2() {
+      alert ("Este es el primer controlador de eventos");
+    }
+
+    function someOtherFunction() {
+      alert ("Este es el segundo controlador de eventos");
+    }
+
+    let p1 = 3;
+    let p2 = 7;
+    document.getElementById("myBtn3").addEventListener("click", function() {
+      myFunction3(p1, p2);
+    });
+
+    function myFunction3(a, b) {
+      document.getElementById("demo3").innerHTML = "Se pasaron dos parametros <br/> El primer término es: "+ a + " <br/>el  segundo término: "+b+" <br/>Al multiplicar resulta:  "+a * b;
+    }
+    //burbujeo
+    document.getElementById("myP1").addEventListener("click", function() {
+      alert("Diste clic en el elemento Blanco!");
+    }, false);
+
+    document.getElementById("myDiv1").addEventListener("click", function() {
+      alert("Diste clic en el elemento Azul!");
+    }, false);
+
+    document.getElementById("myP2").addEventListener("click", function() {
+      alert("Diste clic en el elemento Blanco!");
+    }, true);
+
+    document.getElementById("myDiv2").addEventListener("click", function() {
+      alert("Diste clic en el elemento Azul!");
+    }, true);
+    //Remove
+    document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+    function myFunction() {
+      document.getElementById("demo5").innerHTML = Math.random();
+    }
+    function removeHandler() {
+      document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+    }
+</script>
+</body>
+</html>
