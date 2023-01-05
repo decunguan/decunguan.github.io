@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pregunta 1</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style type="text/css">
+		#background{position:absolute; width:99%; height:130%;}
+		#fixed {position:absolute; top: 0px; left: 0px;}
+	</style>
+</head>
+<body>
+	<div>
+		<img id="background" src="../../Imagenes/fondo.jpg"/> 
+	</div>
+	<div id="fixed" style="padding-left:30%; padding-top: 10%;">
+		<br>	
+		<img src="../../Imagenes/selloespe.jpg" width="65%" align="center">
+		<h1 style="padding-left:25%;">Pregunta 1</h1>
+		<p id="pregunta"> Analizar una cadena de texto en un objeto DOM XML y extraer esa Información con JavaScript</p>
+		<p id="descripcion"> Para este ejercicio se utilizara una cadena de texto sobre marcas de celulares dentro de una tienda.</p>
+		<p id="p3">Tienda de Celulares</p>
+		<p style="padding-left:15%;">
+			<button onclick="traerMarcar1();" > Traer Marca del Primer celular</button>
+			<button onclick="traerMarcar2();">  Traer Marca del Segundo celular</button>
+		</p>
+		<p style="padding-left:35%;"id="p1"></p>
+		<br>
+		<button onclick="window.location.href='../../index.html'">Menu principal</button>
+	</div>
+	
+
+	<script>
+		var parser, xmlDoc;
+		//la cadena de texto muestra marca, modelo y estado
+		var text = 	
+		"<tienda><celular><marca>Samsung</marca><modelo>A30</modelo><estado>nuevo</estado></celular><celular><marca>iPhone</marca><modelo>XII</modelo><estado>Usado</estado></celular></tienda>";
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(text,"text/xml");
+		function traerMarcar1(){
+			document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("marca")[0].childNodes[0].nodeValue;
+		}
+		function traerMarcar2(){
+			document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("marca")[1].childNodes[0].nodeValue;
+
+		}
+	</script>
+</body>
+</html>

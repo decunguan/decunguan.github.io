@@ -1,0 +1,66 @@
+{
+	"peliculas":[{
+		"Genero": "Terror",
+		"Nombre": "Annabel ",
+		"Protagonista": "Patrick Williams"
+	},
+	{
+		"Genero": "Terror",
+		"Nombre": "Terror en Silent Hills",
+		"Protagonista": "Yodel Fredder"
+	},
+	{
+		"Genero": "Terror",
+		"Nombre": "It ",
+		"Protagonista": "Bill Skarsgård"
+	},
+	{
+		"Genero": "Terror",
+		"Nombre": "EL conjuro",
+		"Protagonista": "Vera Farmiga"
+	},
+	{
+		"Genero": "Accion",
+		"Nombre": "John Wick ",
+		"Protagonista": "Keanu Reaves"
+	},
+
+	{
+		"Genero": "Accion",
+		"Nombre": "Rambo ",
+		"Protagonista": "Sylvester Stallone"
+	},
+
+	{
+		"Genero": "Accion",
+		"Nombre": "Mision Imposible ",
+		"Protagonista": "Tom Cruise"
+	},
+
+	{
+		"Genero": "Accion",
+		"Nombre": "Duro de Matar",
+		"Protagonista": "Bruce Willis"
+	},
+	{
+		"Genero": "Drama",
+		"Nombre": "After",
+		"Protagonista": "Josephine Langford"
+	},
+	{
+		"Genero": "Drama",
+		"Nombre": "El club de la Pelea",
+		"Protagonista": "Brad Pitt"
+	},
+	{
+		"Genero": "Drama",
+		"Nombre": "EL Origen",
+		"Protagonista": "Leonardo Di caprio"
+	},
+	{
+		"Genero": "Drama",
+		"Nombre": "El padrino",
+		"Protagonista": "Al Pacino"
+	}	
+	]
+}

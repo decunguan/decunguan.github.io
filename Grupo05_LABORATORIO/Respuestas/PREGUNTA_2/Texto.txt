@@ -1,0 +1,4 @@
+<h1>AJAX</h1>
+<p>AJAX no es un lenguaje de programación.</p>
+<p>AJAX es una tecnología Web para acceder a un Sevidor Web desde una Páginana Web</p>
+<p>AJAX significa JavaScript asíncrono y XML</p>

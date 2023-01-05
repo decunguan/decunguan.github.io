@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pregunta 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style type="text/css">
+      #background{position:absolute; width:99%; height:130%;}
+      #fixed {position:absolute; top: 0px; left: 0px;}
+    </style>
+  </head>
+  <body>
+    <div>
+      <img id="background" src="../../Imagenes/fondo.jpg"/> 
+    </div>
+    <div id="fixed" style="padding-left:30%; padding-top: 10%;">	
+      <br>	
+      <img src="../../Imagenes/selloespe.jpg" width="65%" align="center">
+      <h1 style="padding-left:25%;">Pregunta 2</h1>
+      <p>2) Desarrollar la función CargarDatos(), para desplegar el contenido (Asincrónico) de un archivo XML:</p>
+      <ul style="list-style-type: none;">
+        <li>xhttp = new XMLHttpRequest();<br>
+		  xhttp.onreadystatechange = function() {;<br>
+		     if (this.readyState == 4 && this.status == 200) {;<br>
+                 document.getElementById("demo").innerHTML = ; <br>
+		          this.responseText; <br>
+			 }; <br>
+		   }; ;<br>
+		  xhttp.open("GET", "Texto.txt", true);<br>
+          xhttp.send();<br>
+        </li>
+      </ul>
+      <div class="section" id="enunciado" style="padding-left:25%;margin-top: 5%;" >
+      <button style="align-self: center;" type="button" onclick="CargarDatos()">Obtener Datos</button>
+      </div>
+      <div class="section" id="resolucion" style="margin-top: 5%;">
+      </div>
+      <div class="section" style="margin-top: 5%;">
+      </div>
+      <br>
+      <button onclick="window.location.href='../../index.html'">Menu principal</button>
+    </div>
+
+<script>
+  xmlhttp = new XMLHttpRequest(); //Creacion del objeto XMLHttpRequest
+  xmlhttp.open("GET", "ejemplo.xml", false);//Enviar la solicitud para obtener el archivo ejemplo.xml
+  xmlhttp.send();
+  xmlDoc = xmlhttp.responseXML;//Funcion que va a ser llamada cuando la solicitud reciba una respuesta
+  //Funcion para recuperar los datos del txt
+  function CargarDatos() {
+    document.getElementById("resolucion").innerHTML = '';
+    const n = xmlDoc.getElementsByTagName("nombre");
+    for (var i = 0; i < n.length; i++) {
+      document.getElementById("resolucion").innerHTML += xmlDoc.getElementsByTagName("nombre")[i].childNodes[0].nodeValue+" come "+xmlDoc.getElementsByTagName("comida")[i].childNodes[0].nodeValue+"<br>";
+    }
+  }
+</script>
+
+</body>
+</html>

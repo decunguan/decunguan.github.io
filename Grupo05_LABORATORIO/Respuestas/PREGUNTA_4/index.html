@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pregunta 4</title>
+</head>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body style="background-image: url(../../Imagenes/fondo.jpg) ;background-size: cover;">
+<div class="container">
+  <div class="row">
+    <div class="section" style="margin-left: 10%;margin-top: 10%;">
+      <img src="../../Imagenes/selloespe.jpg" alt="">
+    </div>
+    <div class="section" id="enunciado" style="margin-left: 10%;margin-top: 5%;">
+      <h1 style="text-align: center;">Pregunta 4</h1>
+      <p>4)Mostrar datos XML en una tabla utilizando AJAX.</p>
+      <div class="section" id="enunciado" style="margin-left: 45%;margin-top: 5%;" style="text-align:center;">
+      <button style="align-self: center;" type="button" onclick="CargarDatos()">Obtener Tabla</button>
+      </div>
+      <div class="section" style="margin-left: auto;margin-top: 5%;">
+        <table id="tabla"></table>
+      </div>
+      <br>
+      <button onclick="window.location.href='../../index.html'">Menu principal</button>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+<script>
+  xmlhttp = new XMLHttpRequest(); //Creacion del objeto XMLHttpRequest
+  xmlhttp.open("GET", "ventas.xml", false);//Enviar la solicitud para obtener el archivo ejemplo.xml
+  xmlhttp.send();
+  xmlDoc = xmlhttp.responseXML;//Funcion que va a ser llamada cuando la solicitud reciba una respuesta
+  //Funcion para recuperar los datos del txt
+  function CargarDatos() {
+    document.getElementById("tabla").innerHTML = '';
+    const n = xmlDoc.getElementsByTagName("NUMERO");
+    let table="<tr><th>NUMERO</th><th>TITLE</th><th>DESCRIPCION</th><th>PRECIOU</th><th>CANTIDAD</th><th>PRECIOT</th></tr>";
+    for (var i = 0; i < n.length; i++) {
+      table += "<tr><td>" +
+          xmlDoc.getElementsByTagName("NUMERO")[i].childNodes[0].nodeValue +
+          "</td><td>" +
+          xmlDoc.getElementsByTagName("TITLE")[i].childNodes[0].nodeValue +
+          "</td><td>" +
+          xmlDoc.getElementsByTagName("DESCRIPCION")[i].childNodes[0].nodeValue +
+          "</td><td>"+
+          xmlDoc.getElementsByTagName("PRECIOU")[i].childNodes[0].nodeValue +
+          "</td><td>"+
+          xmlDoc.getElementsByTagName("CANTIDAD")[i].childNodes[0].nodeValue +
+          "</td><td>"+
+          xmlDoc.getElementsByTagName("PRECIOT")[i].childNodes[0].nodeValue +
+          "</td></tr>";
+    }
+    document.getElementById("tabla").innerHTML = table;
+  }
+</script>
+
+</body>
+</html>
