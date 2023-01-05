@@ -62,6 +62,11 @@
                             </a>
                         </li>
                         <li>
+                            <a class="nav-link scrollto active" href="#EjemploXML">
+                                Ejemplo
+                            </a>
+                        </li>
+                        <li>
                             <a class="nav-link scrollto" href="../../index.html">
                                 VOLVER
                             </a>
@@ -144,6 +149,69 @@
         </div>
     </div>
 </section>
+
+
+<section class="about" id="EjemploXML">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img" style="text-align: center;">
+                    <img alt="" src="img/ejemploAjax.png">
+                    </img>
+                </div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h1 class="big-title" style="color: #fff;">
+                    EJEMPLO DE XML
+                </h1>
+                <h3 class="big-subtitle">
+                    Leer un texto de un archivo XML
+                </h3>
+                <hr class="claro">
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Get my CD collection</button>
+<br><br>
+<table id="demo1"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "cd_catalog.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo1").innerHTML = table;
+}
+</script>
+
+
+                </hr>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
