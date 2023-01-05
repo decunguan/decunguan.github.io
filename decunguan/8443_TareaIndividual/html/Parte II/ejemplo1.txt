@@ -1,0 +1,5 @@
+<h1>El sueño se hizo realidad</h1>  
+ <p>El hombre pisó la Luna en julio de <strong>1969</strong>.</p>  
+ <p>Armstrong fue el primer ser humano que pisó la superficie del satélite terrestre <br>  
+ el 21 de julio de 1969 a las 2:56 [UTC] al sur del Mar de la Tranquilidad <br>  
+ (Mare Tranquillitatis), seis horas y media después de haber alunizado.</p>  
