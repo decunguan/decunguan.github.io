@@ -171,12 +171,12 @@
 
 <h1>The XMLHttpRequest Object</h1>
 
-<button type="button" onclick="loadDoc()">Get my CD collection</button>
+<button  class="btn btn-warning"  type="button" onclick="loadDoc1()">Inténtalo</button>
 <br><br>
 <table id="demo1"></table>
 
 <script>
-function loadDoc() {
+function loadDoc1() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
