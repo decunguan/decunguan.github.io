@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<animales>
+	<mamiferos>
+		<id>A01</id>
+		<nombre>El Oso</nombre>
+		<comida>Miel</comida>
+
+	</mamiferos>
+	<mamiferos>
+		<id>A02</id>
+		<nombre>El Guacamayo</nombre>
+		<comida>Semillas</comida>
+	</mamiferos>
+	<reptiles>
+		<id>A03</id>
+		<nombre>El Dinosaurio</nombre>
+		<comida>Carne y hierba</comida>
+	</reptiles>
+	<aves>
+		<id>A04</id>
+		<nombre>El Gato</nombre>
+		<comida>Diente de León</comida>
+	</aves>
+	<peces>
+		<id>A05</id>
+		<nombre>Las Abejas</nombre>
+		<comida>Polen y Miel</comida>
+	</peces>
+	<anfibios>
+		<id>A06</id>
+		<nombre>La Serpiente</nombre>
+		<comida>Roedores</comida>
+	</anfibios>
+</animales>

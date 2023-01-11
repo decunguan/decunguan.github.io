@@ -20,8 +20,9 @@
 		<p id="descripcion"> Para este ejercicio se utilizara una cadena de texto sobre marcas de celulares dentro de una tienda.</p>
 		<p id="p3">Tienda de Celulares</p>
 		<p style="padding-left:15%;">
-			<button onclick="primero();" > Traer fabricante del Primer celular</button>
-			<button onclick="segundo();">  Traer fabricante del Segundo celular</button>
+			<button onclick="primero();" > Traer Animal VIVO </button>
+			<button onclick="segundo();">  Traer Animal MUERTO </button>
+			<button onclick="tercero();">  Traer Animal EXTINTO</button>
 		</p>
 		<p style="padding-left:35%;"id="parrafoImpresion"></p>
 		<br>
@@ -32,15 +33,23 @@
 	<script>
 		var texto, documentoXML;
 		
-		var text = 	
-		"<tienda><celular><fabricante>Samsung</fabricante><modelo>A30</modelo><estado>nuevo</estado></celular><celular><fabricante>iPhone</fabricante><modelo>XII</modelo><estado>Usado</estado></celular></tienda>";
+
+		var text = "<zoologico><animal><mamifero>OSO</mamifero><habitat>clima frio</habitat><estado>vivo</estado></animal><animal><mamifero>Guacamayo</mamifero><habitat>clima calido</habitat><estado>muerto</estado></animal><animal><mamifero>Dinosaurio</mamifero><habitat>jungla</habitat><estado>extinto</estado></animal></zoologico>";
+
 		texto = new DOMParser();
 		documentoXML = texto.parseFromString(text,"text/xml");
 		function primero(){
-			document.getElementById("parrafoImpresion").innerHTML = documentoXML.getElementsByTagName("fabricante")[0].childNodes[0].nodeValue;
+			document.getElementById("parrafoImpresion").innerHTML = 
+			documentoXML.getElementsByTagName("mamifero")[0].childNodes[0].nodeValue;
 		}
 		function segundo(){
-			document.getElementById("parrafoImpresion").innerHTML = documentoXML.getElementsByTagName("fabricante")[1].childNodes[0].nodeValue;
+			document.getElementById("parrafoImpresion").innerHTML = 
+			documentoXML.getElementsByTagName("mamifero")[1].childNodes[0].nodeValue;
+
+		}
+		function tercero(){
+			document.getElementById("parrafoImpresion").innerHTML = 
+			documentoXML.getElementsByTagName("mamifero")[2].childNodes[0].nodeValue;
 
 		}
 	</script>

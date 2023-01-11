@@ -30,29 +30,40 @@
         </li>
       </ul>
       <div class="section" id="enunciado" style="padding-left:25%;margin-top: 5%;" >
-      <button style="align-self: center;" type="button" onclick="obtenerDatos()">Obtener Datos</button>
+            <button style="align-self: center;" type="button" onclick="obtenerDatos()">Obtener Datos</button>
       </div>
       <div class="section" id="impresionDiv" style="margin-top: 5%;">
+
       </div>
       <div class="section" style="margin-top: 5%;">
       </div>
+
+
+
       <br>
       <button onclick="window.location.href='../../index.html'">Menu principal</button>
     </div>
 
+
+
+
 <script>
-  xmlhttp = new XMLHttpRequest(); //Creacion del objeto XMLHttpRequest
-  xmlhttp.open("GET", "ejemplo.txt", false);//Enviar la solicitud para obtener el archivo ejemplo.xml
-  xmlhttp.send();
-  xmlDoc = xmlhttp.responseXML;//Funcion que va a ser llamada cuando la solicitud reciba una respuesta
-  //Funcion para recuperar los datos del txt
-  function obtenerDatos() {
-    document.getElementById("impresionDiv").innerHTML = '';
-    const n = xmlDoc.getElementsByTagName("nombre");
-    for (var i = 0; i < n.length; i++) {
-      document.getElementById("impresionDiv").innerHTML += xmlDoc.getElementsByTagName("nombre")[i].childNodes[0].nodeValue+" come "+xmlDoc.getElementsByTagName("comida")[i].childNodes[0].nodeValue+"<br>";
+function obtenerDatos() {
+  xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "ejemplo.xml", true);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var xmlDoc = this.responseXML, texto = "";
+      const names = xmlDoc.getElementsByTagName("nombre") , foods = xmlDoc.getElementsByTagName("comida");
+      for (var aux = 0; aux < names.length; aux++) {
+        texto+= names[aux].childNodes[0].nodeValue + " come " + foods[aux].childNodes[0].nodeValue + "<br>";
+      }
+      document.getElementById("impresionDiv").innerHTML = texto;
     }
-  }
+  };
+  xhttp.send();
+}
+
 </script>
 
 </body>

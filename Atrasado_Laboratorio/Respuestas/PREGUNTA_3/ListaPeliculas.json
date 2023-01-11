@@ -1,0 +1,80 @@
+{
+  "peliculas": [
+    {
+      "Genero": "Terror",
+      "Nombre": "Annabel ",
+      "Protagonista": "Keanu Reaves"
+    },
+
+    {
+      "Genero": "Terror",
+      "Nombre": "Terror en Silent Hills",
+      "Protagonista": "Sylvester Stallone"
+    },
+
+    {
+      "Genero": "Terror",
+      "Nombre": "It ",
+      "Protagonista": "Tom Cruise"
+    },
+    {
+      "Genero": "Terror",
+      "Nombre": "EL conjuro",
+      "Protagonista": "Tom Cruise"
+    },
+
+    {
+      "Genero": "Accion",
+      "Nombre": "John Wick ",
+      "Protagonista": "Keanu Reaves"
+    },
+
+    {
+      "Genero": "Accion",
+      "Nombre": "Rambo ",
+      "Protagonista": "Sylvester Stallone"
+    },
+
+    {
+      "Genero": "Accion",
+      "Nombre": "Mision Imposible ",
+      "Protagonista": "Tom Cruise"
+    },
+
+    {
+      "Genero": "Accion",
+      "Nombre": "Duro de Matar",
+      "Protagonista": "Keanu Reaves"
+    },
+
+    {
+      "Genero": "Accion",
+      "Nombre": "Rocky ",
+      "Protagonista": "Sylvester Stallone"
+    },
+
+    {
+      "Genero": "Drama",
+      "Nombre": "After",
+      "Protagonista": "Tom Cruise"
+    },
+
+    {
+      "Genero": "Drama",
+      "Nombre": "El club de la Pelea",
+      "Protagonista": "Brad Pitt"
+    },
+
+    {
+      "Genero": "Drama",
+      "Nombre": "EL Origen",
+      "Protagonista": "Leonardo Di caprio"
+    },
+
+    {
+      "Genero": "Drama",
+      "Nombre": "El padrino",
+      "Protagonista": "Sylvester Stallone"
+    }
+  ]
+}
